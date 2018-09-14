@@ -11,5 +11,5 @@ deploy:
   provider: releases
   api_key: "54894f121f4225f8e330b9edebe97dc8ec8b606d"
   file: "*dooble.tar.gz"
-  on:
-    tags: true
+#  on:
+#    tags: true
