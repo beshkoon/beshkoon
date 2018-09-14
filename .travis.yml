@@ -4,7 +4,19 @@ script:
 - ls -a
 - cd dooble
 - ls -a
-- tar czf ../out.tar.gz --exclude "2.x/Windows*"  --exclude "2.x/Translations*"  --exclude "2.x/Dictionaries*"  2.x/
+- tar czf ../dooble.tar.gz --exclude "2.x/Windows*"  --exclude "2.x/Translations*"  --exclude "2.x/Dictionaries*"  2.x/
 
 deploy:
- skip_cleanup: true
+  provider: releases
+  api_key: "54894f121f4225f8e330b9edebe97dc8ec8b606d"
+  file: "*dooble.tar.gz"
+  skip_cleanup: true
+  on:
+    tags: true
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true
