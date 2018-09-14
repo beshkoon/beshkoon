@@ -5,3 +5,6 @@ script:
 - cd dooble
 - ls -a
 - tar czf ../out.tar.gz --exclude "2.x/Windows*"  --exclude "2.x/Translations*"  --exclude "2.x/Dictionaries*"  2.x/
+
+deploy:
+ skip_cleanup: true
