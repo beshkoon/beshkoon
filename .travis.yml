@@ -12,7 +12,7 @@ deploy:
   provider: releases
 #  user: "beshkoon"
 #  password: ""
-  api_key: "54894f121f4225f8e330b9edebe97dc8ec8b606d"
+  api_key: "${test2}"
   file: "../dooble.tar.gz"
 #  on:
 #    tags: true
