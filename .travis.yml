@@ -1,5 +1,7 @@
 install: true
 script:
 - git clone https://github.com/textbrowser/dooble
-cd dooble
+- ls -a
+- cd dooble
+- ls -a
 - tar czf ../out.tar.gz --exclude "2.x/Windows*"  --exclude "2.x/Translations*"  --exclude "2.x/Dictionaries*"  2.x/
