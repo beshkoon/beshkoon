@@ -3,9 +3,9 @@ script:
 - git clone https://github.com/defold/doc
 - ls -a
 - cd doc
-- ls -a
-- tar czf ../defold_doc.tar.gz docs/en/faq docs/en/manuals docs/en/shared docs/en/tutorials docs/en/en.json
-- ls -alh ../
+- du -chs *
+#- tar czf ../defold_doc.tar.gz docs/en/faq docs/en/manuals docs/en/shared docs/en/tutorials docs/en/en.json
+#- ls -alh ../
 
 deploy:
   skip_cleanup: true
@@ -14,5 +14,5 @@ deploy:
 #  password: ""
   api_key: "${test2}"
   file: "../defold_doc.tar.gz"
-#  on:
-#    tags: true
+  on:
+    tags: true
