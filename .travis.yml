@@ -3,7 +3,7 @@ script:
 - git clone https://github.com/defold/doc
 - ls -a
 - cd doc
-- du -chs docs/*
+- du -chs docs/en/*
 #- tar czf ../defold_doc.tar.gz docs/en/faq docs/en/manuals docs/en/shared docs/en/tutorials docs/en/en.json
 #- ls -alh ../
 
