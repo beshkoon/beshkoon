@@ -5,11 +5,14 @@ script:
 - cd dooble
 - ls -a
 - tar czf ../dooble.tar.gz --exclude "2.x/Windows*"  --exclude "2.x/Translations*"  --exclude "2.x/Dictionaries*"  2.x/
+- ls -lh ../dooble.tar.gz
 
 deploy:
   skip_cleanup: true
   provider: releases
+#  user: "beshkoon"
+#  password: ""
   api_key: "54894f121f4225f8e330b9edebe97dc8ec8b606d"
-  file: "*dooble.tar.gz"
+  file: "../dooble.tar.gz"
 #  on:
 #    tags: true
