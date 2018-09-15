@@ -15,5 +15,5 @@ deploy:
 #  password: ""
   api_key: "${test2}"
   file: "../defold_doc.tar.gz"
-  on:
-    tags: true
+#  on:
+#    tags: true
