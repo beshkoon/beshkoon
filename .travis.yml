@@ -4,7 +4,7 @@ script:
 - ls -a
 - cd doc
 - ls -a
-- tar czf ../defold_doc.tar.gz docs/en
+- tar czf ../defold_doc.tar.gz docs/en/faq docs/en/manuals docs/en/shared docs/en/tutorials docs/en/en.json
 - ls -alh ../
 
 deploy:
