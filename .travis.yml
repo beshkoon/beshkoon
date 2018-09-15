@@ -1,11 +1,11 @@
 install: true
 script:
-- git clone https://github.com/textbrowser/dooble
+- git clone https://github.com/defold/doc
 - ls -a
-- cd dooble
+- cd doc
 - ls -a
-- tar czf ../dooble.tar.gz --exclude "2.x/Windows*"  --exclude "2.x/Translations*"  --exclude "2.x/Dictionaries*"  2.x/
-- ls -lh ../dooble.tar.gz
+- tar czf ../defold_doc.tar.gz docs/en
+- ls -alh ../
 
 deploy:
   skip_cleanup: true
@@ -13,6 +13,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../dooble.tar.gz"
+  file: "../defold_doc.tar.gz"
 #  on:
 #    tags: true
