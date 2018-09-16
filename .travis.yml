@@ -3,8 +3,9 @@ script:
 - git clone https://github.com/defold/doc
 - ls -a
 - cd doc
-- tar czf ../defold_doc.tar.gz --exclude "*.png" docs/en/
-- ls -alh ../
+- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
+#- tar czf ../defold_doc.tar.gz --exclude "*.png" docs/en/
+#- ls -alh ../
 #- du -chs docs/en/*
 
 
@@ -15,5 +16,5 @@ deploy:
 #  password: ""
   api_key: "${test2}"
   file: "../defold_doc.tar.gz"
-#  on:
-#    tags: true
+  on:
+    tags: true
