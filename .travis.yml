@@ -1,10 +1,11 @@
 install: true
 script:
-- git clone https://github.com/defold/doc
+- curl -o sunvox-1.9.4c.zip http://www.warmplace.ru/soft/sunvox/sunvox-1.9.4c.zip
 - ls -a
-- cd doc
-- tar czf ../defold_doc.tar.gz --exclude "*.png" docs/en/
-- ls -alh ../
+- unzip sunvox-1.9.4c.zip sunvox/linux*
+- ls -a
+- tar czf sunvox.tar.gz sunvox/linux
+- ls -ahl
 #- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
 #- du -chs docs/en/*
 
@@ -15,6 +16,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../defold_doc.tar.gz"
+  file: "../sunvox.tar.gz"
 #  on:
 #    tags: true
