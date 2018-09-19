@@ -1,11 +1,9 @@
 install: true
 script:
-- mkdir tst
+- git clone https://github.com/wgtdkp/apollonia
 - ls -ahl
-- cd tst
-- git clone https://github.com/libgdx/libgdx.wiki.git
-- tar czf ../libgdx_wiki.tar.gz --exclude "*.png" *
-- ls -alh ../
+- tar czf apollonia.tar.gz --exclude "apollonia/demo/*" apollonia/
+- ls -alh
 #- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
 #- du -chs docs/en/*
 
@@ -16,6 +14,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../libgdx_wiki.tar.gz"
+  file: "../apollonia.tar.gz"
 #  on:
 #    tags: true
