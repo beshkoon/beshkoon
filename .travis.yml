@@ -1,11 +1,11 @@
 install: true
 script:
-- curl -o sunvox-1.9.4c.zip http://www.warmplace.ru/soft/sunvox/sunvox-1.9.4c.zip
-- ls -a
-- unzip -l sunvox-1.9.4c.zip
-- ls -a
-#- tar czf sunvox.tar.gz sunvox/linux
-#- ls -ahl
+- mkdir tst
+- ls -ahl
+- cd tst
+- git clone https://github.com/libgdx/libgdx.wiki.git
+- tar czf ../libgdx_wiki.tar.gz --exclude "*.png" *
+- ls -alh ../
 #- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
 #- du -chs docs/en/*
 
@@ -16,6 +16,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../sunvox.tar.gz"
+  file: "../libgdx_wiki.tar.gz"
 #  on:
 #    tags: true
