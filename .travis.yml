@@ -1,11 +1,9 @@
 install: true
 script:
-- curl -o sunvox-1.9.4c.zip http://www.warmplace.ru/soft/sunvox/sunvox-1.9.4c.zip
-- ls -a
-- unzip sunvox-1.9.4c.zip
-- ls -a
-- tar czf sunvox.tar.gz  --exclude "sunvox/sunvox/windows_x86*"  --exclude "sunvox/sunvox/macos/*" --exclude "sunvox/sunvox/linux_x86_64/*" --exclude "sunvox/sunvox/linux_arm_armhf_raspberry_pi/*" --exclude "sunvox/sunvox/wince/*" --exclude "sunvox/sunvox/linux_arm64/*" --exclude "sunvox/sunvox/linux_arm_armel/*"  --exclude "sunvox/sunvox/linux_arm_armel_maemo/*" sunvox/
+- git clone https://github.com/wgtdkp/apollonia
 - ls -ahl
+- tar czf apollonia.tar.gz --exclude "apollonia/demo/*" --exclude "*.pack" apollonia/
+- ls -alh
 #- find -type f -size +500k -exec ls -lh '{}' \;
 #- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
 #- du -chs docs/en/*
@@ -17,6 +15,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../sunvox.tar.gz"
+  file: "../apollonia.tar.gz"
   on:
     tags: true
