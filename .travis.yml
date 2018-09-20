@@ -4,7 +4,8 @@ script:
 - ls -ahl
 - cd tst
 - git clone https://github.com/libgdx/libgdx.wiki.git
-- find -type f -size +500k -exec ls -lh '{}' \;
+- tar czf ../libgdx_wiki.tar.gz --exclude "*.png" --exclude "*.gif" --exclude "*.pack" *
+#- find -type f -size +500k -exec ls -lh '{}' \;
 #- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
 #- du -chs docs/en/*
 
