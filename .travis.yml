@@ -17,4 +17,4 @@ deploy:
   api_key: "${test2}"
   file: "../libbacktrace.tar.gz"
   on:
-    tags: true
+    tags: false
