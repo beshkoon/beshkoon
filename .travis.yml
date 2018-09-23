@@ -1,11 +1,11 @@
 install: true
 script:
-- git clone https://github.com/wgtdkp/apollonia
-- ls -ahl
-- tar czf apollonia.tar.gz --exclude "apollonia/demo/*" --exclude "*.pack" apollonia/
-- ls -alh
+- mkdir tst
+- curl -o lbt.tar.gz "https://android.googlesource.com/platform/system/core/+archive/master/libbacktrace.tar.gz"
+- cd tst
+- tar xzf ../lbt.tar.gz
+- tar czf ../libbacktrace.tar.gz *.*
 #- find -type f -size +500k -exec ls -lh '{}' \;
-#- find docs/en -type f -size +1024k -exec ls -lh '{}' \;
 #- du -chs docs/en/*
 
 
@@ -15,6 +15,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../apollonia.tar.gz"
+  file: "../libbacktrace.tar.gz"
   on:
     tags: true
