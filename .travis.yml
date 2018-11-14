@@ -2,7 +2,7 @@ install: true
 script:
 - git clone https://github.com/wgtdkp/apollonia
 - ls -ahl
-- tar czf apollonia.tar.gz --exclude "apollonia/demo/*" apollonia/
+- tar czf apollonia.tar.gz --exclude "apollonia/demo/*" --exclude "*.pack" apollonia/
 - ls -alh
 
 #- find -type f -size +500k -exec ls -lh '{}' \;
