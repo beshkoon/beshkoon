@@ -15,6 +15,6 @@ deploy:
 #  user: "beshkoon"
 #  password: ""
   api_key: "${test2}"
-  file: "../apollonia.tar.gz"
+  file: "apollonia.tar.gz"
   on:
     tags: false
